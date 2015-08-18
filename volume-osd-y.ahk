@@ -1,8 +1,5 @@
 ; VolumeOSDy
 ; https://github.com/blole/volume-osd-y
-; based on
-; Volume On-Screen-Display (OSD) -- by Rajat
-; http://www.autohotkey.com/docs/scripts/VolumeOSD.htm
 
 #SingleInstance force
 
@@ -12,7 +9,6 @@ create()
 *Volume_Up::	setVol(exponent)
 *Volume_Down::	setVol(1/exponent)
 #j::Reload
-
 
 
 
@@ -28,7 +24,6 @@ setVol(multiplier)
 		v_new := 100
 	
 	SoundSet, v_new
-	
 	show(v_new)
 }
 
@@ -52,6 +47,7 @@ show(v)
 	
 	SetTimer, hide, -1000
 }
+
 hide()
 {
 	Gui, Hide
