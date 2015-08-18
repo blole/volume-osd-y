@@ -1,14 +1,14 @@
-; VolumeOSDy
+; Volume-OSD-y
 ; https://github.com/blole/volume-osd-y
 
 #SingleInstance force
 
-exponent = 1.1
+exponent := 1.1
 create()
 
 *Volume_Up::	setVol(exponent)
 *Volume_Down::	setVol(1/exponent)
-#j::Reload
+#j::			Reload
 
 
 
@@ -34,7 +34,7 @@ create()
 	Gui, Color, 000000
 	Gui, Font, s10, Tahoma
 	Gui, Add, Text, vMyText cFFFFFF +Center, 100
-	Gui, Add, Slider, vMySlider x20 y12 h95 cWhite +Vertical +Center +Invert +NoTicks Thick20 Buddy2MyText
+	Gui, Add, Slider, vMySlider x20 y12 h95 +Vertical +Center +Invert +NoTicks Buddy2MyText
 	Gui, Margin, 19, 33
 }
 
