@@ -16,8 +16,11 @@ setVol(multiplier)
 {
 	SoundGet v_old
 	
-	if (v_old < 0.01 && multiplier > 1)
-		v_new := 0.01
+	min := 0.01
+	epsilon := 0.00001
+	
+	if (v_old < min-epsilon && multiplier > 1)
+		v_new := min
 	else
 		v_new := v_old*multiplier
 	if (v_new > 100)
