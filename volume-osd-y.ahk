@@ -40,7 +40,7 @@ create()
 
 show(v)
 {
-	Gui, Show, x50 y60, volume
+	Gui, Show, NoActivate x50 y60, volume
 	GuiControl,, MySlider, %v%
 	volString := Format("{1:.0f}", v)
 	GuiControl,, MyText, %volString%
